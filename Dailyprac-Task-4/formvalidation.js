@@ -44,11 +44,7 @@ function display(name, dob, gend, fname, add, mobile, phone,  email, col, mark, 
     document.write("<p><strong>College Name:</strong> " + col + "</p>");
     document.write("<p><strong>Mark:</strong> " + mark + "</p>");
     document.write("<p><strong>Personal Interest:</strong> " + interest + "</p>");
-    function displayImage(src, width, height) {
-        var img = document.createElement("img");
-        img.src = src;
-        img.width = width;
-        img.height = height;
-        document.body.appendChild(img);
-       }
+    var img = document.createElement("img");
+    img.src = "img/myself.jpg";
+    document.body.appendChild(img);
 }
