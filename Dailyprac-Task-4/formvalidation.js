@@ -43,8 +43,15 @@ function display(name, dob, gend, fname, add, mobile, phone,  email, col, mark, 
     document.write("<p><strong>Email:</strong> " + email + "</p>");
     document.write("<p><strong>College Name:</strong> " + col + "</p>");
     document.write("<p><strong>Mark:</strong> " + mark + "</p>");
-    document.write("<p><strong>Personal Interest:</strong> " + interest + "</p>");
-    var img = document.createElement("img");
-    img.src = "img/myself.jpg";
+    function show_image(src, width, height) {
+        var img = document.createElement("img");
+        img.src = src;
+        img.width = width;
+        img.height = height;
+        img.setAttribute = ("class", "center");
+        document.body.appendChild(img);
+    }   
+    
+    show_image("img/myself.jpg", 110, 150,);
     document.body.appendChild(img);
 }
