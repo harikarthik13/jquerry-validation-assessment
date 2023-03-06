@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(img2/bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        form{
+            width:30%;
+            text-align: center;
+          margin-top:200px;
+          margin-left:450px;
+        }
+    </style>
+</head>
+<body>
+    <script src="display.js"> </script>
+   
+</head>
+
+<body>
+    <form action="" name="register" method="post" onsubmit="form()">
+        <fieldset style="border-radius:10px;">
+            <legend style="text-align: center; font-size: xx-large;">Validation Form</legend>
+            <label>User Name :</label>
+            <input type="text" name="un" placeholder=" enter username">
+            <br><br>
+            <label>Password :</label>
+            <input type="password" name="pw" placeholder="enter  password">
+            <br><br>
+            <label> Confirm Password :</label>
+            <input type="password" name="cpw" placeholder="enter confirm password">
+            <br><br>
+            <input type="submit"  value="Sign In">
+            <input type="reset" value="Cancel" class="button">
+        </fieldset>
+    </form>
+</body>
+</html>
