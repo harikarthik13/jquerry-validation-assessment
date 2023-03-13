@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image:url(img/care4.jpg);
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+        
+        label {
+            font-size: large;
+            font-family: sans-serif;
+            font-weight: 550;
+            color: rgb(85, 55, 38);
+        
+        }
+        form{
+            margin-top:30px;
+            border-style: groove;
+            border-width: thick;
+            width:600px;
+            margin-left:50px;
+            padding:20px;
+            border-radius: 20px;
+        }
+
+        #sub {
+            background-color: blanchedalmond;
+            border-radius: 10px;
+            text-align: center;
+            height: 25px;
+            box-shadow: 2px 2px 15px rgb(156, 156, 156);
+            border-style: none;
+          
+        }
+        #sub:hover{
+           transform: scale(1.1); 
+        }
+    </style>
+    <script src="validation.js"></script>
+
+
+<body>
+    <!--form-->
+    <form action="" method="post" name="candidate">
+        
+            <legend style="font-size:xx-large;font-weight: bolder;color: rgb(160, 57, 57);font-family: cursive;text-decoration: underline;">Candidate
+                Registration</legend><br><br>
+            <label >Candidate Name :</label>
+            <input type="text" name="candiname" placeholder="Candidate Name" ><br><br>
+            <label>Date of Birth :</label>
+            <input type="date" name="dob" placeholder="dtae of birth"><br><br>
+            <label>Gender :</label>
+            <input type="radio" name="gen" value="Male" >Male
+            <input type="radio" name="gen" value="Female" >Female <br><br>
+            <label>Qualification :</label>
+            <input type="radio" name="qualification" value="Diploma" >Diploma
+            <input type="radio" name="qualification" value="Graduate" >Graduate
+            <input type="radio" name="qualification" value="Post Graduate" >Post Graduate
+            <input type="radio" name="qualification" value="Professional" >Professional <br><br>
+            <label>Mark Scored :</label>
+            <input type="text" name="mark" pattern="[0-9]{3}\.[0-9]{2}" placeholder="xxx.xx" ><br><br>
+            <label>Grade :</label>
+            <select name="grade" >
+                <option>A+</option>
+                <option>A</option>
+                <option>B+</option>
+                <option>B</option>
+                <option>C+</option>
+                <option>C</option>
+                <option>D</option>
+                <option>E</option>
+            </select><br><br>
+            <label>Languages Known :</label><br>
+            <input type="checkbox" name="tam" value="Tamil">Tamil
+            <input type="checkbox" name="eng" value="English">English
+            <input type="checkbox" name="hin" value="Hindi">Hindi
+            <input type="checkbox" name="mal" value="Malayalam">Malayalam
+            <input type="checkbox" name="tel" value="Telgu">Telgu<br><br>
+            <label>Address :</label>
+            <textarea name="address"></textarea ><br><br>
+            <label>Contact Number :</label>
+            <input type="text" name="contactnum" pattern="[0-9]{10}" placeholder="xxxxxxxxxx" ><br><br>
+            <label>E-Mail ID :</label>
+            <input type="email" name="mail" placeholder="xxxxxxx@gmail.com" ><br><br>
+            <input type="button" id="sub" onclick="validation()" value="submit">
+            <input  id="sub" style="margin-left: 10px;" type="reset" value="Clear Form" class="button">
+
+    
+    </form>
+</body>
+
+</html>
