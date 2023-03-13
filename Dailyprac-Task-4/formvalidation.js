@@ -52,6 +52,6 @@ function display(name, dob, gend, fname, add, mobile, phone,  email, col, mark, 
         document.body.appendChild(img);
     }   
     
-    show_image("img/myself.jpg", 110, 150,);
+    show_image("img/itachi.jpg", 110, 150,);
     document.body.appendChild(img);
 }
