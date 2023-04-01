@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <style>
+        .error{
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <form id="testform" method="post" action="">
+        <fieldset>
+            <legend>Validation Form</legend>
+            <legend>Password</legend>
+            <input type="password" id="psw" name="psw"><br><br>
+
+            <legend>Contact number</legend>
+            <input type="text" id="con" name="con"><br><br>
+
+            <legend>Email</legend>
+            <input type="email" id="mail" name="mail"><br><br>
+
+            <input type="submit" id="btn">
+        </fieldset>
+    </form>
+
+    <script>
+        $(document).ready(function(){
+            $("#testform").validate({
+                rules: {
+                   psw:{
+                    required:true,
+                    minlength:7,
+                    maxlength:16,
+                    pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+~`\-={}[\]:;"'<>,.?/])[A-Za-z].{7,}$/
+
+                   },
+                   con: {
+                        required:true,
+                        pattern: /^[0-9]{3}-[0-9]{3}-[0-9]{4}$/
+                    },
+                    mail:{
+                        required:true,
+                        pattern: /^[a-zA-Z0-9]+@cgvakindia.com$/
+                    }
+                },
+             messages:{
+                psw:{
+                    required:"Empty field can't be accepted",
+                    minlength:"Minimum seven characters required",
+                    maxlength:"Maximum only 16 characters accepted",
+                    pattern:"please enter the valid pattern"
+                },
+                con:{
+                    required:"These field can't be empty",
+                    pattern:"Enter in valid pattern"
+                },
+                mail:{
+                    required:"These field can't be empty",
+                    pattern:"Enter valid mail id"
+                }
+             }
+            });
+        });
+    </script>
+</body>
+</html>
